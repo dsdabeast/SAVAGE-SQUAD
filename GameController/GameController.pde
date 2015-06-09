@@ -1,4 +1,4 @@
-final int screenWidth = 800;
+fuck you ugly asssfinal int screenWidth = 800;
 final int screenHeight = 600;
 int y = 100;
 ShapeFactory factory;
