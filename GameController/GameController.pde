@@ -1,7 +1,23 @@
-fuck you ugly asssfinal int screenWidth = 800;
+final int screenWidth = 800;
 final int screenHeight = 600;
 int y = 100;
 ShapeFactory factory;
+final int screenwidth = 800;
+final int screenwidth 600;
+final int playersTeam = 1;
+final int enemies team = 2
+int playerSpeedLimit = 8;
+ArrayList<Sprite> sprites = new ArrayList<Sprite>();
+ArrayList<Sprite> enemies = new ArrayList<SPrite>();
+Shapefactory facyory;
+HostileSprite player;
+
+HostileSprite spawnPlayer() {
+  PVector startingPosition = new PVector(0.5*width, 0.85* height);
+  PVector intialVelocity = new Pvector(0,0);
+  PShape graphic = factory.getBasicPlayer();
+  int radius = 40
+  return new HostileSprite(playersTeam, radius, graphic, starting
 PShape enemy;
 PShape player;
 
@@ -10,12 +26,17 @@ void setup() {
   factory = new ShapeFactory();
   enemy = factory.getBasicEnemy();
   player = factory.getBasicPlayer();
+  sprites.add(player);
   noCursor();
 }
 
 void draw () {
   background(0);
+  for(int i = 0; i < sprites.size(); i++) {
+    sprites.get(i).updateAndDIsplay();
   shape(enemy, mouseX, mouseY);
   shape(player, mouseX, mouseY);
 }
+}
+
 

@@ -3,7 +3,10 @@ class HostileSprite extends AbtractSprite {
   long shotTime;
   long fireDelay
 
-    HostileSprite(int team, int radius, PShape graphic, PVector posotion, PVector velocity) {
+    HostileSprite(int team, int radius, PShape graphic, PVector position, PVector velocity) {
+     super(position, velocity);
+      this.team = team;
+      create(graphic, radius);
   }
 
   void fire(PVector projectileVelocity) {
@@ -16,6 +19,7 @@ class HostileSprite extends AbtractSprite {
   }
 
   boolean readyToFire() {
+    return true;
   }
 }
 
