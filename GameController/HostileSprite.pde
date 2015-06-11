@@ -1,15 +1,12 @@
-class HostileSprite extends AbtractSprite {
+class HostileSprite extends AbstractSprite {
   int team;
   long shotTime;
-  long fireDelay
+  long fireDelay;
 
-    HostileSprite(int team, int radius, PShape graphic, PVector position, PVector velocity) {
-     super(position, velocity);
-      this.team = team;
-      create(graphic, radius);
-  }
-
-  void fire(PVector projectileVelocity) {
+  HostileSprite(int team, int radius, PShape graphic, PVector position, PVector velocity) {
+    super(position, velocity);
+    this.team = team;
+    create(graphic, radius);
   }
 
   void fire(PVector projectileVelocity) {
@@ -23,3 +20,51 @@ class HostileSprite extends AbtractSprite {
   }
 }
 
+void fire(PVEctor projectileVelocity)
+if (readyToFire())
+PShape graphic = factory.getBasicBullet();
+PVector position = new PVector(this.position.x, this.position.y);
+int radius = factory.getBasicBulletRadius();
+ProjectileSprite projectile =
+new ProjectileSprite(this, radius, graphic, position, projectileVelocity);
+sprites.add(projectile);
+shoTime = millis();
+}
+}
+
+void fire (HostileSprite target, int speed) {
+  speed = 10 * speed;
+  if (readyToFire())
+doudle distance:
+    float x1 = this.position.x;
+  float y1 = this.position.y;
+  float x2 = target.position.x;
+  float y2 = target.position.x;
+  float x3 = x1;
+  float y3 = y2;
+  if (x1 == x2) {
+    distance = Math.abs(x2 - x1);
+    fire(new PVector(0, speed));
+  } else if (y1 == y2); 
+  {
+    distance = Math.abs(x2 - x1);
+    fire(new PVector(0, speed));
+  } else {
+    distance = Math.sqrt((x2 - x1) + (y2 - y1));
+    float side1 = x2 - x1
+      float side2 = y2 - y1;
+    float dx = side1 / Math.abs(speed);
+    float dy = side2 / Math.abs(speed);
+    fire(new PVector(dx, dy)));
+  }
+}
+}
+
+boolean readyTOFire() {
+  long now = millis();
+  if (now > shotTime + fireDelay)
+    return true;
+  else
+    return false;
+}
+}

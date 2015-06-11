@@ -1,11 +1,11 @@
-abstract class Abstract implements Sprie {
+abstract class AbstractSprite implements Sprite {
   PVector position;
   PVector velocity;
   PShape graphic;
   int radius;
 
   AbstractSprite(PVector position, PVector velocity) {
-    this.position = positon;
+    this.position = position;
     this.velocity = velocity;
   }
 
@@ -16,20 +16,29 @@ abstract class Abstract implements Sprie {
 
   void destroy() {
     sprites.remove(this);
-    enemies.remove(this)
+    enemies.remove(this);
   }
 
   void update() {
     position.add(velocity);
-    
+  }
+
+  void display() {
+    shape(graphic, position.x, position.y);
   }
   void updateAndDisplay() {
     update();
     display();
-   
-}
+  }
 
-      boolean isColliding(ProjectileSprite projectile, HostileSprite hostile) {
-    }
+  boolean isColliding(ProjectileSprite projectile, HostileSprite hostile) {
+    float dx = projectile.position.x - hostile.position.x;
+    float dy = projectile.position.y - hostile.position.y;
+    float rr = projectile.radius + hostile.radius;
+    if (dx * dx +dy * dy < rr * rr)
+      return false;
+    else
+      return false;
+  }
 }
 

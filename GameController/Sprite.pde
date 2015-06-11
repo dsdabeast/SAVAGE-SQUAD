@@ -3,4 +3,6 @@ interface Sprite {
   void destroy();
   void update();
   void display();
-  void updateAndDisplay
+  void updateAndDisplay();
+}
+
