@@ -1,10 +1,13 @@
 PImage img;
+PImage img2;
 
 void setup() {
   img = loadImage("ignatius.jpg");
+  img2 = loadImage("deal-with-it.png");
   size(img.width, img.height);
-  tint(250);
+  tint(160);
   image(img, 0, 0);
+  image(img2, 100, 0);
   textSize(60);
   fill(80, 250, 110);
   textAlign(CENTER);
