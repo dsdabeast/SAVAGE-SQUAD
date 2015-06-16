@@ -21,7 +21,7 @@ class HostileSprite extends AbstractSprite {
 }
 
 void fire(PVEctor projectileVelocity)
-if (readyToFire())
+
 PShape graphic = factory.getBasicBullet();
 PVector position = new PVector(this.position.x, this.position.y);
 int radius = factory.getBasicBulletRadius();
