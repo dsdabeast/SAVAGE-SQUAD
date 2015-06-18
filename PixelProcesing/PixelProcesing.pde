@@ -1,17 +1,23 @@
 PImage img;
 PImage img2;
+PImage img3;
 
 void setup() {
   img = loadImage("ignatius.jpg");
   img2 = loadImage("deal-with-it.png");
-  size(img.width, img.height);
+  img2.resize(81, 86);
+    size(img.width, img.height);
   tint(160);
   image(img, 0, 0);
-  image(img2, 100, 0);
-  textSize(60);
-  fill(80, 250, 110);
+  rotate(.4);
+  image(img2, 200, -51);
+  textSize(50);
+  fill(200, 250, 200);
   textAlign(CENTER);
-  text("J.U.G IS LIFE", width/2, height-100);
+  rotate(-.4);
+  text("J.U.G LIFE", width/2, height-100);
+  
+  
 }
 void draw() {
 }
