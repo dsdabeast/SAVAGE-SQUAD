@@ -10,7 +10,7 @@ void setup() {
   tint(160);
   image(img, 0, 0);
   rotate(.4);
-  image(img2, 200, -51);
+  image(img2, 199, -52);
   textSize(50);
   fill(200, 250, 200);
   textAlign(CENTER);
