@@ -1,0 +1,11 @@
+body {
+   background: url("../Bang/lala.jpg")
+		no-repeat center center fixed;
+   background-size: cover;
+ }
+   
+.container {
+	max-width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
