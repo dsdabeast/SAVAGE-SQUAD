@@ -1,0 +1,19 @@
+body {
+	color:#ffffff;
+   background: url("../Bang/lala.jpg")
+		no-repeat center center fixed;
+   background-size: cover;
+ }
+   
+.container {
+	max-width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.main{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	background-color: 
+}
